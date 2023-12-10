@@ -1,0 +1,77 @@
+.registration-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.dashboard {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.donation-form {
+  max-width: 400px;
+  margin: auto;
+}
+
+select,
+input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.school-dashboard {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section,
+.financial-reports,
+.impact-reports,
+.nominated-students,
+.inventory-management,
+.donation-tracking {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.charity-shop-dashboard {
+  /* Apply similar styling as needed */
+}
+.food-bank-dashboard {
+  /* Apply similar styling as needed */
+}
+.admin-dashboard {
+  /* Apply similar styling as needed */
+}
+.corporate-sponsor-dashboard {
+  /* Apply similar styling as needed */
+}

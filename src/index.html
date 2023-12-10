@@ -1,0 +1,199 @@
+<div class="registration-form">
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="Enter your name">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" placeholder="Enter your email">
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" placeholder="Enter your password">
+
+  <button onclick="register()">Register</button>
+</div>
+<div class="dashboard">
+  <h2>Parent/Guardian Dashboard</h2>
+  <!-- Display donation history, subscribed schools, charity shops, etc. -->
+</div>
+<div class="donation-form">
+  <label for="donationMode">Select Donation Mode:</label>
+  <select id="donationMode" onchange="updateForm()">
+    <option value="shareMeal">Share a Meal</option>
+    <option value="clothingPurchase">Clothing Purchase</option>
+    <option value="physicalDonation">Physical Donation</option>
+  </select>
+
+  <!-- Dynamic form elements based on donation mode -->
+  <div id="formElements"></div>
+
+  <button onclick="submitDonation()">Submit Donation</button>
+</div>
+<!-- Include Socket.io in your HTML -->
+<script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+
+<!-- Example JavaScript for real-time updates -->
+<script>
+  const socket = io();
+  // Listen for real-time updates
+  socket.on('dashboardUpdate', (data) => {
+    // Update dashboard elements based on real-time data
+  });
+  // Example: Triggering a real-time update from the backend
+  function triggerUpdate() {
+    socket.emit('updateDashboard', {
+      /* data to send */
+    });
+  }
+</script>
+<div class="school-dashboard">
+  <h2>School Dashboard</h2>
+
+  <!-- School Profile -->
+  <section class="profile-section">
+    <h3>School Profile</h3>
+    <!-- Display school's profile details -->
+  </section>
+
+  <!-- Financial Reports -->
+  <section class="financial-reports">
+    <h3>Financial Reports</h3>
+    <!-- Display financial reports for funds received and utilization -->
+  </section>
+
+  <!-- Student Impact Reports -->
+  <section class="impact-reports">
+    <h3>Student Impact Reports</h3>
+    <!-- Display reports on how donations benefit students -->
+  </section>
+
+  <!-- Nominated Students and Packages -->
+  <section class="nominated-students">
+    <h3>Nominated Students and Packages</h3>
+    <!-- Display nominated students and their assigned packages -->
+  </section>
+
+  <!-- Inventory Management -->
+  <section class="inventory-management">
+    <h3>Inventory Management</h3>
+    <!-- Include features for managing inventory -->
+  </section>
+
+  <!-- Donation Tracking -->
+  <section class="donation-tracking">
+    <h3>Donation Tracking</h3>
+    <!-- Display tracking features for donations -->
+  </section>
+</div>
+<div class="charity-shop-dashboard">
+  <h2>Charity Shop Dashboard</h2>
+
+  <!-- Charity Shop Profile -->
+  <section class="profile-section">
+    <h3>Charity Shop Profile</h3>
+    <!-- Display charity shop's profile details -->
+  </section>
+
+  <!-- Financial Reports -->
+  <section class="financial-reports">
+    <h3>Financial Reports</h3>
+    <!-- Display financial reports for funds received and utilization -->
+  </section>
+
+  <!-- Nominated Beneficiaries -->
+  <section class="nominated-beneficiaries">
+    <h3>Nominated Beneficiaries</h3>
+    <!-- Display nominated beneficiaries for specific donations -->
+  </section>
+
+  <!-- Package Assignment -->
+  <section class="package-assignment">
+    <h3>Package Assignment</h3>
+    <!-- Implement features for assigning packages to nominated beneficiaries -->
+  </section>
+
+  <!-- Inventory Management -->
+  <section class="inventory-management">
+    <h3>Inventory Management</h3>
+    <!-- Include features for managing inventory -->
+  </section>
+
+  <!-- Donation Tracking -->
+  <section class="donation-tracking">
+    <h3>Donation Tracking</h3>
+    <!-- Display tracking features for donations -->
+  </section>
+</div>
+<div class="food-bank-dashboard">
+  <h2>Food Bank Dashboard</h2>
+
+  <!-- Food Bank Profile -->
+  <section class="profile-section">
+    <h3>Food Bank Profile</h3>
+    <!-- Display food bank's profile details -->
+  </section>
+
+  <!-- Inventory Dashboard -->
+  <section class="inventory-dashboard">
+    <h3>Inventory Dashboard</h3>
+    <!-- Display surplus items uploaded for schools to pick -->
+  </section>
+
+  <!-- Verification Status -->
+  <section class="verification-status">
+    <h3>Verification Status</h3>
+    <!-- Display whether the food bank is verified for transparency -->
+  </section>
+
+  <!-- Surplus Items Management -->
+  <section class="surplus-items-management">
+    <h3>Surplus Items Management</h3>
+    <!-- Allow upload and management of surplus items -->
+  </section>
+</div>
+<div class="admin-dashboard">
+  <h2>Administrator Dashboard</h2>
+
+  <!-- Analytics on User Behavior and App Performance -->
+  <section class="analytics-section">
+    <h3>User Behavior and App Performance Analytics</h3>
+    <!-- Display charts and graphs showcasing user-related data -->
+  </section>
+
+  <!-- User Management -->
+  <section class="user-management">
+    <h3>User Management</h3>
+    <!-- Enable user management features -->
+  </section>
+
+  <!-- Entity Verification -->
+  <section class="entity-verification">
+    <h3>Entity Verification</h3>
+    <!-- Verify and manage entities (schools, charity shops, food banks) for transparency -->
+  </section>
+
+  <!-- Serial Number Tracking -->
+  <section class="serial-number-tracking">
+    <h3>Serial Number Tracking</h3>
+    <!-- Oversee the assignment and tracking of distinct serial numbers for donated items -->
+  </section>
+</div>
+<div class="corporate-sponsor-dashboard">
+  <h2>Corporate Sponsor Dashboard</h2>
+
+  <!-- Corporate Profile -->
+  <section class="profile-section">
+    <h3>Corporate Profile</h3>
+    <!-- Display corporate profile and CSR initiatives -->
+  </section>
+
+  <!-- Engagement Tools -->
+  <section class="engagement-tools">
+    <h3>Engagement Tools</h3>
+    <!-- Features to organize donation drives, track employee participation, and share impact -->
+  </section>
+
+  <!-- Analytics on CSR Initiatives -->
+  <section class="csr-analytics">
+    <h3>CSR Initiatives Analytics</h3>
+    <!-- Display analytics on CSR initiatives, employee participation, and overall contribution -->
+  </section>
+</div>
